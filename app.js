@@ -6,12 +6,11 @@ const blogRoutes = require('./routes/blogRoutes');
 
 //express app
 const app = express();
-
+app.listen(PORT);
 //connect to MongoDB
 const DB = 'mongodb+srv://Yashar:33456Yashar@cluster0.wcrhxar.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(DB)
-.then((result)=> app.listen(PORT))
-.catch((err)=> console.log(err));
+
 
 
 
